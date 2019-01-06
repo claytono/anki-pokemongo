@@ -13,10 +13,6 @@ def make_img_src(filename)
   return ''
 end
 
-def get_form_image_html(pokemon)
-  return make_img_src(pokemon.asset_filename), make_img_src(pokemon.shiny_asset_filename)
-end
-
 def pokemon2csv(pokemon)
   name = pokemon.name
   if pokemon.form?
@@ -25,9 +21,9 @@ def pokemon2csv(pokemon)
     name += ' ' + pokemon.form_to_s
   end
 
-  image_html, shiny_image_html = get_form_image_html(pokemon)
   [name, pokemon.number, pokemon.types_to_s,
-   image_html, shiny_image_html,
+   make_img_src(pokemon.asset_filename),
+   make_img_src(pokemon.shiny_asset_filename),
    pokemon.generation].join(',')
 end
 
