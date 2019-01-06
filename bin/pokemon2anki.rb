@@ -6,12 +6,6 @@ require 'json'
 require 'pp'
 require 'pokemon'
 
-def titlecase(str)
-  str.gsub(/_/, ' ').gsub(/\w+/) do |word|
-    word.capitalize
-  end
-end
-
 def get_form_asset_id(number, name, form_name, templates)
   return 0 if form_name.nil?
   tid = sprintf("FORMS_V%04d_POKEMON_%s", number, name).upcase
@@ -44,23 +38,15 @@ end
 
 def pokemon2csv(tid, mon, templates)
   pokemon = Pokemon.new(templates[tid], templates)
-  type = titlecase(mon['type'])
-  if mon.key?('type2')
-    type += " & " + titlecase(mon['type2'])
-  end
-  type.gsub!(/Pokemon Type /, '')
-
-  name = titlecase(mon['pokemonId'])
-  if mon['form']
-    if mon['form'] =~ /_NORMAL/
-      # Normal forms all have two entries, skip the form one.
-      return
-    end
-    name = titlecase(mon['form'])
+  name = pokemon.name
+  if pokemon.form?
+    # Normal forms all have two entries, skip the form one.
+    return if pokemon.form == :normal
+    name += ' ' + pokemon.form_to_s
   end
 
   image_html, shiny_image_html = get_form_image_html(pokemon.number, mon['pokemonId'], mon['form'], templates)
-  puts [name, pokemon.number, type, image_html, shiny_image_html, pokemon.generation].join(',')
+  puts [name, pokemon.number, pokemon.types_to_s, image_html, shiny_image_html, pokemon.generation].join(',')
 end
 
 gamemaster = JSON.parse(File.read('PogoAssets/gamemaster/gamemaster.json'))
