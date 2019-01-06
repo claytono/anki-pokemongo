@@ -5,9 +5,9 @@ require 'generation'
 # Represents a Pokemon as known in the gamemaster file
 class Pokemon
   attr_reader :name, :form, :number
-  attr_reader :generation, :types
+  attr_reader :generation, :types, :asset_id
 
-  def initialize(entry, _gamemaster)
+  def initialize(entry, gamemaster)
     @template_id = entry['templateId']
     @data = entry['pokemonSettings']
 
@@ -16,6 +16,7 @@ class Pokemon
     @generation = Generation.new(number)
     @name = titlecase(@data['pokemonId'])
     populate_form
+    @asset_id = calculate_asset_id(gamemaster)
   end
 
   def types_to_s
@@ -50,6 +51,23 @@ class Pokemon
 
     @form = @data['form'].downcase
     @form = form[(@name.length + 1)..-1].to_sym
+  end
+
+  def calculate_asset_id(gamemaster)
+    return 0 unless form?
+
+    # calculate what the form template id would be if it exists
+    tid = format('FORMS_V%<number>04d_POKEMON_%<name>s',
+                 number: number, name: name.upcase)
+    forms = gamemaster.dig(tid, 'formSettings', 'forms')
+    return unless forms
+
+    # Find the form match if it exists.
+    forms = gamemaster[tid]['formSettings']['forms'].select do |form|
+      form['form'] == @data['form']
+    end
+
+    forms.dig(0, 'assetBundleValue') || 0
   end
 
   def type_const_to_string(const)
