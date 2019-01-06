@@ -14,9 +14,7 @@ def make_img_src(filename)
 end
 
 def get_form_image_html(pokemon)
-  filename = sprintf("pokemon_icon_%03d_%02d.png", pokemon.number, pokemon.asset_id)
-  shiny_filename = sprintf("pokemon_icon_%03d_%02d_shiny.png", pokemon.number, pokemon.asset_id)
-  return make_img_src(filename), make_img_src(shiny_filename)
+  return make_img_src(pokemon.asset_filename), make_img_src(pokemon.shiny_asset_filename)
 end
 
 def pokemon2csv(tid, mon, templates)

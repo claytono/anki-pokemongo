@@ -31,6 +31,17 @@ class Pokemon
     !@form.nil?
   end
 
+  # Returns the normal asset filename and the shiny filename
+  def asset_filename
+    format('pokemon_icon_%<number>03d_%<asset_id>02d.png',
+           number: number, asset_id: asset_id)
+  end
+
+  def shiny_asset_filename
+    format('pokemon_icon_%<number>03d_%<asset_id>02d_shiny.png',
+           number: number, asset_id: asset_id)
+  end
+
   private
 
   def populate_number
