@@ -1,7 +1,10 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
 require 'json'
 require 'pp'
+require 'pokemon'
 
 def titlecase(str)
   str.gsub(/_/, ' ').gsub(/\w+/) do |word|
@@ -65,7 +68,7 @@ def get_form_image_html(number, name, form_name, templates)
 end
 
 def pokemon2csv(tid, mon, templates)
-  number = template_id_to_dex_number(tid)
+  pokemon = Pokemon.new(templates[tid], templates)
   type = titlecase(mon['type'])
   if mon.key?('type2')
     type += " & " + titlecase(mon['type2'])
@@ -81,9 +84,9 @@ def pokemon2csv(tid, mon, templates)
     name = titlecase(mon['form'])
   end
 
-  gen = number_to_gen(number)
-  image_html, shiny_image_html = get_form_image_html(number, mon['pokemonId'], mon['form'], templates)
-  puts [name, number, type, image_html, shiny_image_html, gen].join(',')
+  gen = number_to_gen(pokemon.number)
+  image_html, shiny_image_html = get_form_image_html(pokemon.number, mon['pokemonId'], mon['form'], templates)
+  puts [name, pokemon.number, type, image_html, shiny_image_html, gen].join(',')
 end
 
 gamemaster = JSON.parse(File.read('PogoAssets/gamemaster/gamemaster.json'))
