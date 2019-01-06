@@ -17,8 +17,7 @@ def get_form_image_html(pokemon)
   return make_img_src(pokemon.asset_filename), make_img_src(pokemon.shiny_asset_filename)
 end
 
-def pokemon2csv(tid, mon, templates)
-  pokemon = Pokemon.new(templates[tid], templates)
+def pokemon2csv(pokemon)
   name = pokemon.name
   if pokemon.form?
     # Normal forms all have two entries, skip the form one.
@@ -27,7 +26,9 @@ def pokemon2csv(tid, mon, templates)
   end
 
   image_html, shiny_image_html = get_form_image_html(pokemon)
-  puts [name, pokemon.number, pokemon.types_to_s, image_html, shiny_image_html, pokemon.generation].join(',')
+  [name, pokemon.number, pokemon.types_to_s,
+   image_html, shiny_image_html,
+   pokemon.generation].join(',')
 end
 
 gamemaster = JSON.parse(File.read('PogoAssets/gamemaster/gamemaster.json'))
@@ -45,6 +46,8 @@ end
 puts "tags:pokemongo,pokemon"
 gamemaster['itemTemplates'].each do |item|
   if item.key?('pokemonSettings')
-    pokemon2csv(item['templateId'], item['pokemonSettings'], templates)
+    pokemon = Pokemon.new(item, templates)
+    line = pokemon2csv(pokemon)
+    puts line if line
   end
 end
