@@ -32,11 +32,6 @@ def number_to_gen(number)
   return 'Unknown'
 end
 
-def template_id_to_dex_number(name)
-  m = /^V(\d+)_POKEMON/.match(name)
-  return m[1].to_i
-end
-
 def get_form_asset_id(number, name, form_name, templates)
   return 0 if form_name.nil?
   tid = sprintf("FORMS_V%04d_POKEMON_%s", number, name).upcase
