@@ -12,26 +12,6 @@ def titlecase(str)
   end
 end
 
-def number_to_gen(number)
-  if number <= 151
-    return 'Kanto/Gen1'
-  elsif number <= 251
-    return 'Johto/Gen2'
-  elsif number <= 386
-    return 'Hoenn/Gen3'
-  elsif number <= 493
-    return 'Sinnoh/Gen4'
-  elsif number <= 649
-    return 'Unova/Gen5'
-  elsif number <= 721
-    return 'Kalos/Gen6'
-  elsif number <= 809
-    return 'Gen 7'
-  end
-
-  return 'Unknown'
-end
-
 def get_form_asset_id(number, name, form_name, templates)
   return 0 if form_name.nil?
   tid = sprintf("FORMS_V%04d_POKEMON_%s", number, name).upcase
@@ -79,9 +59,8 @@ def pokemon2csv(tid, mon, templates)
     name = titlecase(mon['form'])
   end
 
-  gen = number_to_gen(pokemon.number)
   image_html, shiny_image_html = get_form_image_html(pokemon.number, mon['pokemonId'], mon['form'], templates)
-  puts [name, pokemon.number, type, image_html, shiny_image_html, gen].join(',')
+  puts [name, pokemon.number, type, image_html, shiny_image_html, pokemon.generation].join(',')
 end
 
 gamemaster = JSON.parse(File.read('PogoAssets/gamemaster/gamemaster.json'))

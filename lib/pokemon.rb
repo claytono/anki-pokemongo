@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
+require 'generation'
+
 # Represents a Pokemon as known in the gamemaster file
 class Pokemon
-  attr_reader :number
+  attr_reader :number, :generation
 
   def initialize(entry, _gamemaster)
     @template_id = entry['templateId']
     @data = entry['pokemonSettings']
+
     populate_number
+    @generation = Generation.new(number)
   end
 
   private
