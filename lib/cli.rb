@@ -17,24 +17,20 @@ class CLI
   end
 
   def run
-    gamemaster = JSON.parse(File.read(@opts[:gamemaster]))
-    templates = {}
-    gamemaster['itemTemplates'].each do |item|
-      tid = item['templateId']
-      if templates[tid]
-        puts 'Duplicate template!'
-        pp item
-        return
+    read_gamemaster
+    output_file('pokemon') do |f|
+      pokemon_count = 0
+      @gamemaster.each_pair do |tid, item|
+        next unless item.key?('pokemonSettings')
+
+        pokemon = Pokemon.new(item, @gamemaster)
+        line = pokemon2csv(pokemon)
+        if line
+          f.puts line
+          pokemon_count += 1
+        end
       end
-      templates[tid] = item
-    end
-
-    gamemaster['itemTemplates'].each do |item|
-      next unless item.key?('pokemonSettings')
-
-      pokemon = Pokemon.new(item, templates)
-      line = pokemon2csv(pokemon)
-      puts line if line
+      puts "Processed #{pokemon_count} pokemon"
     end
   end
 
@@ -45,7 +41,10 @@ class CLI
       o.string '-g', '--gamemaster',
         "Path to gamemaster json file (default: #{DEFAULT_GAMEMASTER_PATH})",
         default: DEFAULT_GAMEMASTER_PATH
-      o.boolean '-h', '--help', "Display help"
+      o.string '-o', '--output',
+        'Directory for output files (default: output/)',
+        default: 'output'
+      o.boolean '-h', '--help', 'Display help'
     end
 
     if opts.help?
@@ -53,7 +52,28 @@ class CLI
       exit 1
     end
 
-    return opts
+    opts
+  end
+
+  def read_gamemaster
+    raw_gamemaster = JSON.parse(File.read(@opts[:gamemaster]))
+    @gamemaster = {}
+    raw_gamemaster['itemTemplates'].each do |item|
+      tid = item['templateId']
+      if @gamemaster[tid]
+        puts 'Duplicate template!'
+        pp item
+        exit 1
+      end
+      @gamemaster[tid] = item
+    end
+  end
+
+  def output_file(type)
+    filename = File.join(@opts[:output], type + '.csv')
+    File.open(filename, 'w') do |f|
+      yield f
+    end
   end
 
   def pokemon2csv(pokemon)
