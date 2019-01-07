@@ -50,7 +50,7 @@ class CLI
       make_img_src(pokemon.asset_filename),
       make_img_src(pokemon.shiny_asset_filename),
       pokemon.generation,
-    ].join(',')
+    ].to_csv
   end
 
   def make_img_src(filename)
