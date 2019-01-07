@@ -3,17 +3,21 @@
 require 'json'
 require 'pp'
 require 'csv'
+require 'slop'
 
 require 'pokemon'
 
 # Implements the CLI interface for the Anki card generation
 class CLI
+  DEFAULT_GAMEMASTER_PATH = 'PogoAssets/gamemaster/gamemaster.json'
+
   def initialize(argv)
     @argv = argv
+    @opts = parse_opts(argv)
   end
 
   def run
-    gamemaster = JSON.parse(File.read('PogoAssets/gamemaster/gamemaster.json'))
+    gamemaster = JSON.parse(File.read(@opts[:gamemaster]))
     templates = {}
     gamemaster['itemTemplates'].each do |item|
       tid = item['templateId']
@@ -35,6 +39,22 @@ class CLI
   end
 
   private
+
+  def parse_opts(argv)
+    opts = Slop.parse argv do |o|
+      o.string '-g', '--gamemaster',
+        "Path to gamemaster json file (default: #{DEFAULT_GAMEMASTER_PATH})",
+        default: DEFAULT_GAMEMASTER_PATH
+      o.boolean '-h', '--help', "Display help"
+    end
+
+    if opts.help?
+      puts opts
+      exit 1
+    end
+
+    return opts
+  end
 
   def pokemon2csv(pokemon)
     name = pokemon.name
