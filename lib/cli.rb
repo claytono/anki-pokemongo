@@ -18,20 +18,7 @@ class CLI
 
   def run
     read_gamemaster
-    output_file('pokemon') do |f|
-      pokemon_count = 0
-      @gamemaster.each_pair do |tid, item|
-        next unless item.key?('pokemonSettings')
-
-        pokemon = Pokemon.new(item, @gamemaster)
-        line = pokemon2csv(pokemon)
-        if line
-          f.puts line
-          pokemon_count += 1
-        end
-      end
-      puts "Processed #{pokemon_count} pokemon"
-    end
+    export_pokemon
   end
 
   private
@@ -66,6 +53,23 @@ class CLI
         exit 1
       end
       @gamemaster[tid] = item
+    end
+  end
+
+  def export_pokemon
+    output_file('pokemon') do |f|
+      pokemon_count = 0
+      @gamemaster.each_pair do |tid, item|
+        next unless item.key?('pokemonSettings')
+
+        pokemon = Pokemon.new(item, @gamemaster)
+        line = pokemon2csv(pokemon)
+        if line
+          f.puts line
+          pokemon_count += 1
+        end
+      end
+      puts "Processed #{pokemon_count} pokemon"
     end
   end
 
