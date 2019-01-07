@@ -5,6 +5,7 @@ require 'pp'
 require 'csv'
 require 'slop'
 
+require 'util'
 require 'pokemon'
 
 # Implements the CLI interface for the Anki card generation

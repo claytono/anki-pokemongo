@@ -14,7 +14,7 @@ class Pokemon
     populate_number
     populate_types
     @generation = Generation.new(number)
-    @name = titlecase(@data['pokemonId'])
+    @name = @data['pokemonId'].titlecase
     populate_form
     @asset_id = calculate_asset_id(gamemaster)
   end
@@ -24,7 +24,7 @@ class Pokemon
   end
 
   def form_to_s
-    titlecase(@form.to_s)
+    @form.to_s.titlecase
   end
 
   def form?
@@ -82,11 +82,7 @@ class Pokemon
   end
 
   def type_const_to_string(const)
-    type = titlecase(const)
+    type = const.titlecase
     type.gsub!(/Pokemon Type /, '')
-  end
-
-  def titlecase(str)
-    str.tr('_', ' ').gsub(/\w+/, &:capitalize)
   end
 end
