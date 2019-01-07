@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+require 'json'
+require 'pp'
+require 'csv'
+
+require 'pokemon'
+
 # Implements the CLI interface for the Anki card generation
 class CLI
   def initialize(argv)
