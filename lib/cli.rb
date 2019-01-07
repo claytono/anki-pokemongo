@@ -7,6 +7,7 @@ require 'slop'
 
 require 'util'
 require 'pokemon'
+require 'type'
 
 # Implements the CLI interface for the Anki card generation
 class CLI
@@ -19,7 +20,8 @@ class CLI
 
   def run
     read_gamemaster
-    export_pokemon
+    export_pokemon if @opts[:pokemon]
+    export_types if @opts[:types]
   end
 
   private
@@ -32,6 +34,10 @@ class CLI
       o.string '-o', '--output',
         'Directory for output files (default: output/)',
         default: 'output'
+      o.bool "--pokemon", "Export pokemon data (default: true)",
+        default: true
+      o.bool "--types", "Export type effectiveness data (default: true)",
+        default: true
       o.boolean '-h', '--help', 'Display help'
     end
 
@@ -59,18 +65,41 @@ class CLI
 
   def export_pokemon
     output_file('pokemon') do |f|
-      pokemon_count = 0
-      @gamemaster.each_pair do |tid, item|
+      count = 0
+      @gamemaster.each_value do |item|
         next unless item.key?('pokemonSettings')
 
         pokemon = Pokemon.new(item, @gamemaster)
         line = pokemon2csv(pokemon)
         if line
           f.puts line
-          pokemon_count += 1
+          count += 1
         end
       end
-      puts "Processed #{pokemon_count} pokemon"
+      puts "Processed #{count} pokemon"
+    end
+  end
+
+  def export_types
+    output_file('types') do |f|
+      types = []
+      @gamemaster.each_value do |item|
+        next unless item.key?('typeEffective')
+
+        types << Type.new(item)
+      end
+
+      count = 0
+      types.each do |type1|
+        types.each do |type2|
+          line = type_vs_to_csv(type1, type2)
+          next unless line
+
+          f.puts line
+          count += 1
+        end
+      end
+      puts "Processed #{count} types"
     end
   end
 
@@ -95,6 +124,16 @@ class CLI
       make_img_src(pokemon.asset_filename),
       make_img_src(pokemon.shiny_asset_filename),
       pokemon.generation,
+    ].to_csv
+  end
+
+  def type_vs_to_csv(type1, type2)
+    summary, scalar = type1.vs(type2)
+    return if summary == 'Neutral'
+
+    [
+      "#{type1.name} vs #{type2.name}",
+      "#{summary} (#{scalar}x)",
     ].to_csv
   end
 
