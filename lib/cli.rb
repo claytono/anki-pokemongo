@@ -134,11 +134,15 @@ class CLI
     [
       "#{type1.name} vs #{type2.name}",
       "#{summary} (#{scalar}x)",
+      make_img_src(type1.asset_filename),
+      make_img_src(type2.asset_filename),
     ].to_csv
   end
 
   def make_img_src(filename)
-    if File.exist?(File.join('PogoAssets', 'pokemon_icons', filename))
+    file1 = File.join('PogoAssets', 'pokemon_icons', filename)
+    file2 = File.join('PogoAssets', 'static_assets', 'png', filename)
+    if File.exist?(file1) || File.exist?(file2)
       return "<img src=\"#{filename}\">"
     end
 

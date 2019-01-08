@@ -39,6 +39,11 @@ class Type
     [classify_scalar(scalar), scalar]
   end
 
+  def asset_filename
+    shortname = name.sub('Fighting', 'Fight')
+    "Badge_Type_#{shortname}_01.png"
+  end
+
   private
 
   def classify_scalar(scalar)

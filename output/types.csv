@@ -1,120 +1,120 @@
-Bug vs Dark,Super effective (1.6x)
-Bug vs Fairy,Not very effective (0.625x)
-Bug vs Fighting,Not very effective (0.625x)
-Bug vs Fire,Not very effective (0.625x)
-Bug vs Flying,Not very effective (0.625x)
-Bug vs Ghost,Not very effective (0.625x)
-Bug vs Grass,Super effective (1.6x)
-Bug vs Poison,Not very effective (0.625x)
-Bug vs Psychic,Super effective (1.6x)
-Bug vs Steel,Not very effective (0.625x)
-Dark vs Dark,Not very effective (0.625x)
-Dark vs Fairy,Not very effective (0.625x)
-Dark vs Fighting,Not very effective (0.625x)
-Dark vs Ghost,Super effective (1.6x)
-Dark vs Psychic,Super effective (1.6x)
-Dragon vs Dragon,Super effective (1.6x)
-Dragon vs Fairy,No effect (0.391x)
-Dragon vs Steel,Not very effective (0.625x)
-Electric vs Dragon,Not very effective (0.625x)
-Electric vs Electric,Not very effective (0.625x)
-Electric vs Flying,Super effective (1.6x)
-Electric vs Grass,Not very effective (0.625x)
-Electric vs Ground,No effect (0.391x)
-Electric vs Water,Super effective (1.6x)
-Fairy vs Dark,Super effective (1.6x)
-Fairy vs Dragon,Super effective (1.6x)
-Fairy vs Fighting,Super effective (1.6x)
-Fairy vs Fire,Not very effective (0.625x)
-Fairy vs Poison,Not very effective (0.625x)
-Fairy vs Steel,Not very effective (0.625x)
-Fighting vs Bug,Not very effective (0.625x)
-Fighting vs Dark,Super effective (1.6x)
-Fighting vs Fairy,Not very effective (0.625x)
-Fighting vs Flying,Not very effective (0.625x)
-Fighting vs Ghost,No effect (0.391x)
-Fighting vs Ice,Super effective (1.6x)
-Fighting vs Normal,Super effective (1.6x)
-Fighting vs Poison,Not very effective (0.625x)
-Fighting vs Psychic,Not very effective (0.625x)
-Fighting vs Rock,Super effective (1.6x)
-Fighting vs Steel,Super effective (1.6x)
-Fire vs Bug,Super effective (1.6x)
-Fire vs Dragon,Not very effective (0.625x)
-Fire vs Fire,Not very effective (0.625x)
-Fire vs Grass,Super effective (1.6x)
-Fire vs Ice,Super effective (1.6x)
-Fire vs Rock,Not very effective (0.625x)
-Fire vs Steel,Super effective (1.6x)
-Fire vs Water,Not very effective (0.625x)
-Flying vs Bug,Super effective (1.6x)
-Flying vs Electric,Not very effective (0.625x)
-Flying vs Fighting,Super effective (1.6x)
-Flying vs Grass,Super effective (1.6x)
-Flying vs Rock,Not very effective (0.625x)
-Flying vs Steel,Not very effective (0.625x)
-Ghost vs Dark,Not very effective (0.625x)
-Ghost vs Ghost,Super effective (1.6x)
-Ghost vs Normal,No effect (0.391x)
-Ghost vs Psychic,Super effective (1.6x)
-Grass vs Bug,Not very effective (0.625x)
-Grass vs Dragon,Not very effective (0.625x)
-Grass vs Fire,Not very effective (0.625x)
-Grass vs Flying,Not very effective (0.625x)
-Grass vs Grass,Not very effective (0.625x)
-Grass vs Ground,Super effective (1.6x)
-Grass vs Poison,Not very effective (0.625x)
-Grass vs Rock,Super effective (1.6x)
-Grass vs Steel,Not very effective (0.625x)
-Grass vs Water,Super effective (1.6x)
-Ground vs Bug,Not very effective (0.625x)
-Ground vs Electric,Super effective (1.6x)
-Ground vs Fire,Super effective (1.6x)
-Ground vs Flying,No effect (0.391x)
-Ground vs Grass,Not very effective (0.625x)
-Ground vs Poison,Super effective (1.6x)
-Ground vs Rock,Super effective (1.6x)
-Ground vs Steel,Super effective (1.6x)
-Ice vs Dragon,Super effective (1.6x)
-Ice vs Fire,Not very effective (0.625x)
-Ice vs Flying,Super effective (1.6x)
-Ice vs Grass,Super effective (1.6x)
-Ice vs Ground,Super effective (1.6x)
-Ice vs Ice,Not very effective (0.625x)
-Ice vs Steel,Not very effective (0.625x)
-Ice vs Water,Not very effective (0.625x)
-Normal vs Ghost,No effect (0.391x)
-Normal vs Rock,Not very effective (0.625x)
-Normal vs Steel,Not very effective (0.625x)
-Poison vs Fairy,Super effective (1.6x)
-Poison vs Ghost,Not very effective (0.625x)
-Poison vs Grass,Super effective (1.6x)
-Poison vs Ground,Not very effective (0.625x)
-Poison vs Poison,Not very effective (0.625x)
-Poison vs Rock,Not very effective (0.625x)
-Poison vs Steel,No effect (0.391x)
-Psychic vs Dark,No effect (0.391x)
-Psychic vs Fighting,Super effective (1.6x)
-Psychic vs Poison,Super effective (1.6x)
-Psychic vs Psychic,Not very effective (0.625x)
-Psychic vs Steel,Not very effective (0.625x)
-Rock vs Bug,Super effective (1.6x)
-Rock vs Fighting,Not very effective (0.625x)
-Rock vs Fire,Super effective (1.6x)
-Rock vs Flying,Super effective (1.6x)
-Rock vs Ground,Not very effective (0.625x)
-Rock vs Ice,Super effective (1.6x)
-Rock vs Steel,Not very effective (0.625x)
-Steel vs Electric,Not very effective (0.625x)
-Steel vs Fairy,Super effective (1.6x)
-Steel vs Fire,Not very effective (0.625x)
-Steel vs Ice,Super effective (1.6x)
-Steel vs Rock,Super effective (1.6x)
-Steel vs Steel,Not very effective (0.625x)
-Steel vs Water,Not very effective (0.625x)
-Water vs Dragon,Not very effective (0.625x)
-Water vs Fire,Super effective (1.6x)
-Water vs Grass,Not very effective (0.625x)
-Water vs Ground,Super effective (1.6x)
-Water vs Rock,Super effective (1.6x)
-Water vs Water,Not very effective (0.625x)
+Bug vs Dark,Super effective (1.6x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Bug vs Fairy,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Bug vs Fighting,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Bug vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Bug vs Flying,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Bug vs Ghost,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Bug vs Grass,Super effective (1.6x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Bug vs Poison,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Bug vs Psychic,Super effective (1.6x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Psychic_01.png"">"
+Bug vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Bug_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Dark vs Dark,Not very effective (0.625x),"<img src=""Badge_Type_Dark_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Dark vs Fairy,Not very effective (0.625x),"<img src=""Badge_Type_Dark_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Dark vs Fighting,Not very effective (0.625x),"<img src=""Badge_Type_Dark_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Dark vs Ghost,Super effective (1.6x),"<img src=""Badge_Type_Dark_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Dark vs Psychic,Super effective (1.6x),"<img src=""Badge_Type_Dark_01.png"">","<img src=""Badge_Type_Psychic_01.png"">"
+Dragon vs Dragon,Super effective (1.6x),"<img src=""Badge_Type_Dragon_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Dragon vs Fairy,No effect (0.391x),"<img src=""Badge_Type_Dragon_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Dragon vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Dragon_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Electric vs Dragon,Not very effective (0.625x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Electric vs Electric,Not very effective (0.625x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Electric_01.png"">"
+Electric vs Flying,Super effective (1.6x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Electric vs Grass,Not very effective (0.625x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Electric vs Ground,No effect (0.391x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Electric vs Water,Super effective (1.6x),"<img src=""Badge_Type_Electric_01.png"">","<img src=""Badge_Type_Water_01.png"">"
+Fairy vs Dark,Super effective (1.6x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Fairy vs Dragon,Super effective (1.6x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Fairy vs Fighting,Super effective (1.6x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Fairy vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Fairy vs Poison,Not very effective (0.625x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Fairy vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Fairy_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Fighting vs Bug,Not very effective (0.625x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Fighting vs Dark,Super effective (1.6x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Fighting vs Fairy,Not very effective (0.625x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Fighting vs Flying,Not very effective (0.625x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Fighting vs Ghost,No effect (0.391x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Fighting vs Ice,Super effective (1.6x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Ice_01.png"">"
+Fighting vs Normal,Super effective (1.6x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Normal_01.png"">"
+Fighting vs Poison,Not very effective (0.625x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Fighting vs Psychic,Not very effective (0.625x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Psychic_01.png"">"
+Fighting vs Rock,Super effective (1.6x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Fighting vs Steel,Super effective (1.6x),"<img src=""Badge_Type_Fight_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Fire vs Bug,Super effective (1.6x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Fire vs Dragon,Not very effective (0.625x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Fire vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Fire vs Grass,Super effective (1.6x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Fire vs Ice,Super effective (1.6x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Ice_01.png"">"
+Fire vs Rock,Not very effective (0.625x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Fire vs Steel,Super effective (1.6x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Fire vs Water,Not very effective (0.625x),"<img src=""Badge_Type_Fire_01.png"">","<img src=""Badge_Type_Water_01.png"">"
+Flying vs Bug,Super effective (1.6x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Flying vs Electric,Not very effective (0.625x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Electric_01.png"">"
+Flying vs Fighting,Super effective (1.6x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Flying vs Grass,Super effective (1.6x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Flying vs Rock,Not very effective (0.625x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Flying vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Flying_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Ghost vs Dark,Not very effective (0.625x),"<img src=""Badge_Type_Ghost_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Ghost vs Ghost,Super effective (1.6x),"<img src=""Badge_Type_Ghost_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Ghost vs Normal,No effect (0.391x),"<img src=""Badge_Type_Ghost_01.png"">","<img src=""Badge_Type_Normal_01.png"">"
+Ghost vs Psychic,Super effective (1.6x),"<img src=""Badge_Type_Ghost_01.png"">","<img src=""Badge_Type_Psychic_01.png"">"
+Grass vs Bug,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Grass vs Dragon,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Grass vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Grass vs Flying,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Grass vs Grass,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Grass vs Ground,Super effective (1.6x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Grass vs Poison,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Grass vs Rock,Super effective (1.6x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Grass vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Grass vs Water,Super effective (1.6x),"<img src=""Badge_Type_Grass_01.png"">","<img src=""Badge_Type_Water_01.png"">"
+Ground vs Bug,Not very effective (0.625x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Ground vs Electric,Super effective (1.6x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Electric_01.png"">"
+Ground vs Fire,Super effective (1.6x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Ground vs Flying,No effect (0.391x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Ground vs Grass,Not very effective (0.625x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Ground vs Poison,Super effective (1.6x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Ground vs Rock,Super effective (1.6x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Ground vs Steel,Super effective (1.6x),"<img src=""Badge_Type_Ground_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Ice vs Dragon,Super effective (1.6x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Ice vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Ice vs Flying,Super effective (1.6x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Ice vs Grass,Super effective (1.6x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Ice vs Ground,Super effective (1.6x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Ice vs Ice,Not very effective (0.625x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Ice_01.png"">"
+Ice vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Ice vs Water,Not very effective (0.625x),"<img src=""Badge_Type_Ice_01.png"">","<img src=""Badge_Type_Water_01.png"">"
+Normal vs Ghost,No effect (0.391x),"<img src=""Badge_Type_Normal_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Normal vs Rock,Not very effective (0.625x),"<img src=""Badge_Type_Normal_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Normal vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Normal_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Poison vs Fairy,Super effective (1.6x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Poison vs Ghost,Not very effective (0.625x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Ghost_01.png"">"
+Poison vs Grass,Super effective (1.6x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Poison vs Ground,Not very effective (0.625x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Poison vs Poison,Not very effective (0.625x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Poison vs Rock,Not very effective (0.625x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Poison vs Steel,No effect (0.391x),"<img src=""Badge_Type_Poison_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Psychic vs Dark,No effect (0.391x),"<img src=""Badge_Type_Psychic_01.png"">","<img src=""Badge_Type_Dark_01.png"">"
+Psychic vs Fighting,Super effective (1.6x),"<img src=""Badge_Type_Psychic_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Psychic vs Poison,Super effective (1.6x),"<img src=""Badge_Type_Psychic_01.png"">","<img src=""Badge_Type_Poison_01.png"">"
+Psychic vs Psychic,Not very effective (0.625x),"<img src=""Badge_Type_Psychic_01.png"">","<img src=""Badge_Type_Psychic_01.png"">"
+Psychic vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Psychic_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Rock vs Bug,Super effective (1.6x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Bug_01.png"">"
+Rock vs Fighting,Not very effective (0.625x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Fight_01.png"">"
+Rock vs Fire,Super effective (1.6x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Rock vs Flying,Super effective (1.6x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Flying_01.png"">"
+Rock vs Ground,Not very effective (0.625x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Rock vs Ice,Super effective (1.6x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Ice_01.png"">"
+Rock vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Rock_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Steel vs Electric,Not very effective (0.625x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Electric_01.png"">"
+Steel vs Fairy,Super effective (1.6x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Fairy_01.png"">"
+Steel vs Fire,Not very effective (0.625x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Steel vs Ice,Super effective (1.6x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Ice_01.png"">"
+Steel vs Rock,Super effective (1.6x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Steel vs Steel,Not very effective (0.625x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Steel_01.png"">"
+Steel vs Water,Not very effective (0.625x),"<img src=""Badge_Type_Steel_01.png"">","<img src=""Badge_Type_Water_01.png"">"
+Water vs Dragon,Not very effective (0.625x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Dragon_01.png"">"
+Water vs Fire,Super effective (1.6x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Fire_01.png"">"
+Water vs Grass,Not very effective (0.625x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Grass_01.png"">"
+Water vs Ground,Super effective (1.6x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Ground_01.png"">"
+Water vs Rock,Super effective (1.6x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Rock_01.png"">"
+Water vs Water,Not very effective (0.625x),"<img src=""Badge_Type_Water_01.png"">","<img src=""Badge_Type_Water_01.png"">"
