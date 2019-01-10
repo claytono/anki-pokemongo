@@ -88,12 +88,10 @@ class CLI
   end
 
   def pokemon2csv(pokemon)
-    name = pokemon.name
-    # Normal forms all have two entries, skip the form one.
     if pokemon.form?
-      return if pokemon.form == :normal
-
-      name += ' ' + pokemon.form_to_s
+      name = [pokemon.name, pokemon.form_to_s].join(' ')
+    else
+      name = pokemon.name
     end
 
     [
