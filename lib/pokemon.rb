@@ -34,12 +34,12 @@ class Pokemon
   # Returns the normal asset filename and the shiny filename
   def asset_filename
     format('pokemon_icon_%<number>03d_%<asset_id>02d.png',
-           number: number, asset_id: asset_id)
+      number: number, asset_id: asset_id)
   end
 
   def shiny_asset_filename
     format('pokemon_icon_%<number>03d_%<asset_id>02d_shiny.png',
-           number: number, asset_id: asset_id)
+      number: number, asset_id: asset_id)
   end
 
   private
@@ -69,7 +69,7 @@ class Pokemon
 
     # calculate what the form template id would be if it exists
     tid = format('FORMS_V%<number>04d_POKEMON_%<name>s',
-                 number: number, name: name.upcase)
+      number: number, name: name.upcase)
     forms = gamemaster.dig(tid, 'formSettings', 'forms')
     return unless forms
 

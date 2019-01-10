@@ -34,9 +34,9 @@ class CLI
       o.string '-o', '--output',
         'Directory for output files (default: output/)',
         default: 'output'
-      o.bool "--pokemon", "Export pokemon data (default: true)",
+      o.bool '--pokemon', 'Export pokemon data (default: true)',
         default: true
-      o.bool "--types", "Export type effectiveness data (default: true)",
+      o.bool '--types', 'Export type effectiveness data (default: true)',
         default: true
       o.boolean '-h', '--help', 'Display help'
     end
