@@ -6,8 +6,7 @@ require 'csv'
 require 'slop'
 
 require 'util'
-require 'pokemon'
-require 'type'
+require 'gamemaster'
 
 # Implements the CLI interface for the Anki card generation
 class CLI
@@ -16,10 +15,11 @@ class CLI
   def initialize(argv)
     @argv = argv
     @opts = parse_opts(argv)
+    @gamemaster = Gamemaster.new(@opts[:gamemaster])
   end
 
   def run
-    read_gamemaster
+    @gamemaster.load
     export_pokemon if @opts[:pokemon]
     export_types if @opts[:types]
   end
@@ -49,27 +49,10 @@ class CLI
     opts
   end
 
-  def read_gamemaster
-    raw_gamemaster = JSON.parse(File.read(@opts[:gamemaster]))
-    @gamemaster = {}
-    raw_gamemaster['itemTemplates'].each do |item|
-      tid = item['templateId']
-      if @gamemaster[tid]
-        puts 'Duplicate template!'
-        pp item
-        exit 1
-      end
-      @gamemaster[tid] = item
-    end
-  end
-
   def export_pokemon
     output_file('pokemon') do |f|
       count = 0
-      @gamemaster.each_value do |item|
-        next unless item.key?('pokemonSettings')
-
-        pokemon = Pokemon.new(item, @gamemaster)
+      @gamemaster.pokemon.each do |pokemon|
         line = pokemon2csv(pokemon)
         if line
           f.puts line
@@ -82,13 +65,7 @@ class CLI
 
   def export_types
     output_file('types') do |f|
-      types = []
-      @gamemaster.each_value do |item|
-        next unless item.key?('typeEffective')
-
-        types << Type.new(item)
-      end
-
+      types = @gamemaster.types
       count = 0
       types.each do |type1|
         types.each do |type2|
