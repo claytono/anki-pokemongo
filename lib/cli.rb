@@ -22,6 +22,7 @@ class CLI
     @gamemaster.load
     export_pokemon if @opts[:pokemon]
     export_types if @opts[:types]
+    export_evolutions if @opts[:evolutions]
   end
 
   private
@@ -37,6 +38,8 @@ class CLI
       o.bool '--pokemon', 'Export pokemon data (default: true)',
         default: true
       o.bool '--types', 'Export type effectiveness data (default: true)',
+        default: true
+      o.bool '--evolutions', 'Export evolutions data (default: true)',
         default: true
       o.boolean '-h', '--help', 'Display help'
     end
@@ -80,6 +83,15 @@ class CLI
     end
   end
 
+  def export_evolutions
+    output_file('evolutions') do |f|
+      @gamemaster.evolutions.each do |evolution|
+        f.puts evolution_to_csv(evolution)
+      end
+      puts "Processed #{@gamemaster.evolutions.length} evolutions"
+    end
+  end
+
   def output_file(type)
     filename = File.join(@opts[:output], type + '.csv')
     File.open(filename, 'w') do |f|
@@ -111,6 +123,16 @@ class CLI
       "#{summary} (#{scalar}x)",
       make_img_src(type1.asset_filename),
       make_img_src(type2.asset_filename),
+    ].to_csv
+  end
+
+  def evolution_to_csv(evolution)
+    [
+      evolution.to.fancy_name,
+      evolution.from.fancy_name,
+      evolution.candy_cost,
+      make_img_src(evolution.to.asset_filename),
+      make_img_src(evolution.from.asset_filename),
     ].to_csv
   end
 

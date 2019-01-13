@@ -4,8 +4,9 @@ require 'generation'
 
 # Represents a Pokemon as known in the gamemaster file
 class Pokemon
-  attr_reader :name, :form, :number
+  attr_reader :name, :form, :form_id, :number
   attr_reader :generation, :types, :asset_id
+  attr_reader :data
 
   def initialize(entry, gamemaster)
     @template_id = entry['templateId']
@@ -19,12 +20,24 @@ class Pokemon
     @asset_id = calculate_asset_id(gamemaster)
   end
 
+  def fancy_name
+    if form?
+      "#{name} #{form_to_s}"
+    else
+      name
+    end
+  end
+
   def types_to_s
     @types.map(&:to_s).join(' & ')
   end
 
   def form_to_s
     @form.to_s.titlecase
+  end
+
+  def to_s
+    "#{form_id} ##{number}"
   end
 
   def form?
@@ -58,10 +71,12 @@ class Pokemon
 
   def populate_form
     @form = nil
+    @form_id = @data['pokemonId']
     return unless @data.key?('form')
 
     @form = @data['form'].downcase
     @form = form[(@name.length + 1)..-1].to_sym
+    @form_id = @data['form']
   end
 
   def calculate_asset_id(gamemaster)
