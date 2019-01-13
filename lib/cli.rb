@@ -7,6 +7,7 @@ require 'slop'
 
 require 'util'
 require 'gamemaster'
+require 'assetmanager'
 
 # Implements the CLI interface for the Anki card generation
 class CLI
@@ -16,6 +17,7 @@ class CLI
     @argv = argv
     @opts = parse_opts(argv)
     @gamemaster = Gamemaster.new(@opts[:gamemaster])
+    @am = AssetManager.new('assets')
   end
 
   def run
@@ -23,6 +25,7 @@ class CLI
     export_pokemon if @opts[:pokemon]
     export_types if @opts[:types]
     export_evolutions if @opts[:evolutions]
+    @am.collect_assets
   end
 
   private
@@ -108,8 +111,8 @@ class CLI
 
     [
       name, pokemon.number, pokemon.types_to_s,
-      make_img_src(pokemon.asset_filename),
-      make_img_src(pokemon.shiny_asset_filename),
+      @am.make_img_src(pokemon.asset_filenames),
+      @am.make_img_src(pokemon.shiny_asset_filenames),
       pokemon.generation,
     ].to_csv
   end
@@ -121,8 +124,8 @@ class CLI
     [
       "#{type1.name} vs #{type2.name}",
       "#{summary} (#{scalar}x)",
-      make_img_src(type1.asset_filename),
-      make_img_src(type2.asset_filename),
+      @am.make_img_src(type1.asset_filename),
+      @am.make_img_src(type2.asset_filename),
     ].to_csv
   end
 
@@ -131,18 +134,10 @@ class CLI
       evolution.to.fancy_name,
       evolution.from.fancy_name,
       evolution.candy_cost,
-      make_img_src(evolution.to.asset_filename),
-      make_img_src(evolution.from.asset_filename),
+      @am.make_img_src(evolution.to.asset_filenames),
+      @am.make_img_src(evolution.from.asset_filenames),
     ].to_csv
   end
 
-  def make_img_src(filename)
-    file1 = File.join('PogoAssets', 'pokemon_icons', filename)
-    file2 = File.join('PogoAssets', 'static_assets', 'png', filename)
-    if File.exist?(file1) || File.exist?(file2)
-      return "<img src=\"#{filename}\">"
-    end
 
-    ''
-  end
 end

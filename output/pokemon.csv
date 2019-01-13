@@ -433,9 +433,9 @@ Cranidos,408,Rock & Rock,"<img src=""pokemon_icon_408_00.png"">","<img src=""pok
 Rampardos,409,Rock & Rock,"<img src=""pokemon_icon_409_00.png"">","<img src=""pokemon_icon_409_00_shiny.png"">",Sinnoh/Gen4
 Shieldon,410,Rock & Steel,"<img src=""pokemon_icon_410_00.png"">","<img src=""pokemon_icon_410_00_shiny.png"">",Sinnoh/Gen4
 Bastiodon,411,Rock & Steel,"<img src=""pokemon_icon_411_00.png"">","<img src=""pokemon_icon_411_00_shiny.png"">",Sinnoh/Gen4
-Burmy Plant,412,Bug,"","",Sinnoh/Gen4
-Burmy Sandy,412,Bug,"","",Sinnoh/Gen4
-Burmy Trash,412,Bug,"","",Sinnoh/Gen4
+Burmy Plant,412,Bug,"<img src=""412-plant.png"">","",Sinnoh/Gen4
+Burmy Sandy,412,Bug,"<img src=""412-sandy.png"">","",Sinnoh/Gen4
+Burmy Trash,412,Bug,"<img src=""412-trash.png"">","",Sinnoh/Gen4
 Wormadam Plant,413,Bug & Grass,"<img src=""pokemon_icon_413_11.png"">","<img src=""pokemon_icon_413_11_shiny.png"">",Sinnoh/Gen4
 Wormadam Sandy,413,Bug & Ground,"<img src=""pokemon_icon_413_12.png"">","<img src=""pokemon_icon_413_12_shiny.png"">",Sinnoh/Gen4
 Wormadam Trash,413,Bug & Steel,"<img src=""pokemon_icon_413_13.png"">","<img src=""pokemon_icon_413_13_shiny.png"">",Sinnoh/Gen4
@@ -477,8 +477,8 @@ Garchomp,445,Dragon & Ground,"<img src=""pokemon_icon_445_00.png"">","<img src="
 Munchlax,446,Normal,"<img src=""pokemon_icon_446_00.png"">","<img src=""pokemon_icon_446_00_shiny.png"">",Sinnoh/Gen4
 Riolu,447,Fighting,"<img src=""pokemon_icon_447_00.png"">","<img src=""pokemon_icon_447_00_shiny.png"">",Sinnoh/Gen4
 Lucario,448,Fighting & Steel,"<img src=""pokemon_icon_448_00.png"">","<img src=""pokemon_icon_448_00_shiny.png"">",Sinnoh/Gen4
-Hippopotas,449,Ground,"","",Sinnoh/Gen4
-Hippowdon,450,Ground,"","",Sinnoh/Gen4
+Hippopotas,449,Ground,"<img src=""449.png"">","",Sinnoh/Gen4
+Hippowdon,450,Ground,"<img src=""450.png"">","",Sinnoh/Gen4
 Skorupi,451,Poison & Bug,"<img src=""pokemon_icon_451_00.png"">","<img src=""pokemon_icon_451_00_shiny.png"">",Sinnoh/Gen4
 Drapion,452,Poison & Dark,"<img src=""pokemon_icon_452_00.png"">","<img src=""pokemon_icon_452_00_shiny.png"">",Sinnoh/Gen4
 Croagunk,453,Poison & Fighting,"<img src=""pokemon_icon_453_00.png"">","<img src=""pokemon_icon_453_00_shiny.png"">",Sinnoh/Gen4
@@ -507,12 +507,12 @@ Gallade,475,Psychic & Fighting,"<img src=""pokemon_icon_475_00.png"">","<img src
 Probopass,476,Rock & Steel,"<img src=""pokemon_icon_476_00.png"">","<img src=""pokemon_icon_476_00_shiny.png"">",Sinnoh/Gen4
 Dusknoir,477,Ghost,"<img src=""pokemon_icon_477_00.png"">","<img src=""pokemon_icon_477_00_shiny.png"">",Sinnoh/Gen4
 Froslass,478,Ice & Ghost,"<img src=""pokemon_icon_478_00.png"">","<img src=""pokemon_icon_478_00_shiny.png"">",Sinnoh/Gen4
-Rotom Fan,479,Electric & Flying,"","",Sinnoh/Gen4
-Rotom Frost,479,Electric & Ice,"","",Sinnoh/Gen4
-Rotom Heat,479,Electric & Fire,"","",Sinnoh/Gen4
-Rotom Mow,479,Electric & Grass,"","",Sinnoh/Gen4
-Rotom Normal,479,Electric & Ghost,"","",Sinnoh/Gen4
-Rotom Wash,479,Electric & Water,"","",Sinnoh/Gen4
+Rotom Fan,479,Electric & Flying,"<img src=""479-fan.png"">","",Sinnoh/Gen4
+Rotom Frost,479,Electric & Ice,"<img src=""479-frost.png"">","",Sinnoh/Gen4
+Rotom Heat,479,Electric & Fire,"<img src=""479-heat.png"">","",Sinnoh/Gen4
+Rotom Mow,479,Electric & Grass,"<img src=""479-mow.png"">","",Sinnoh/Gen4
+Rotom Normal,479,Electric & Ghost,"<img src=""479.png"">","",Sinnoh/Gen4
+Rotom Wash,479,Electric & Water,"<img src=""479-wash.png"">","",Sinnoh/Gen4
 Uxie,480,Psychic,"<img src=""pokemon_icon_480_00.png"">","<img src=""pokemon_icon_480_00_shiny.png"">",Sinnoh/Gen4
 Mesprit,481,Psychic,"<img src=""pokemon_icon_481_00.png"">","<img src=""pokemon_icon_481_00_shiny.png"">",Sinnoh/Gen4
 Azelf,482,Psychic,"<img src=""pokemon_icon_482_00.png"">","<img src=""pokemon_icon_482_00_shiny.png"">",Sinnoh/Gen4
@@ -524,27 +524,27 @@ Giratina Altered,487,Ghost & Dragon,"<img src=""pokemon_icon_487_11.png"">","<im
 Giratina Origin,487,Ghost & Dragon,"<img src=""pokemon_icon_487_12.png"">","<img src=""pokemon_icon_487_12_shiny.png"">",Sinnoh/Gen4
 Cresselia,488,Psychic,"<img src=""pokemon_icon_488_00.png"">","<img src=""pokemon_icon_488_00_shiny.png"">",Sinnoh/Gen4
 Phione,489,Water,"<img src=""pokemon_icon_489_00.png"">","<img src=""pokemon_icon_489_00_shiny.png"">",Sinnoh/Gen4
-Manaphy,490,Water,"","",Sinnoh/Gen4
+Manaphy,490,Water,"<img src=""490.png"">","",Sinnoh/Gen4
 Darkrai,491,Dark,"<img src=""pokemon_icon_491_00.png"">","<img src=""pokemon_icon_491_00_shiny.png"">",Sinnoh/Gen4
 Shaymin Land,492,Grass,"<img src=""pokemon_icon_492_11.png"">","<img src=""pokemon_icon_492_11_shiny.png"">",Sinnoh/Gen4
 Shaymin Sky,492,Grass & Flying,"<img src=""pokemon_icon_492_12.png"">","<img src=""pokemon_icon_492_12_shiny.png"">",Sinnoh/Gen4
-Arceus Bug,493,Bug,"","",Sinnoh/Gen4
-Arceus Dark,493,Dark,"","",Sinnoh/Gen4
-Arceus Dragon,493,Dragon,"","",Sinnoh/Gen4
-Arceus Electric,493,Electric,"","",Sinnoh/Gen4
-Arceus Fairy,493,Fairy,"","",Sinnoh/Gen4
-Arceus Fighting,493,Fighting,"","",Sinnoh/Gen4
-Arceus Fire,493,Fire,"","",Sinnoh/Gen4
-Arceus Flying,493,Flying,"","",Sinnoh/Gen4
-Arceus Ghost,493,Ghost,"","",Sinnoh/Gen4
-Arceus Grass,493,Grass,"","",Sinnoh/Gen4
-Arceus Ground,493,Ground,"","",Sinnoh/Gen4
-Arceus Ice,493,Ice,"","",Sinnoh/Gen4
-Arceus Normal,493,Normal,"","",Sinnoh/Gen4
-Arceus Poison,493,Poison,"","",Sinnoh/Gen4
-Arceus Psychic,493,Psychic,"","",Sinnoh/Gen4
-Arceus Rock,493,Rock,"","",Sinnoh/Gen4
-Arceus Steel,493,Steel,"","",Sinnoh/Gen4
-Arceus Water,493,Water,"","",Sinnoh/Gen4
+Arceus Bug,493,Bug,"<img src=""493-bug.png"">","",Sinnoh/Gen4
+Arceus Dark,493,Dark,"<img src=""493-dark.png"">","",Sinnoh/Gen4
+Arceus Dragon,493,Dragon,"<img src=""493-dragon.png"">","",Sinnoh/Gen4
+Arceus Electric,493,Electric,"<img src=""493-electric.png"">","",Sinnoh/Gen4
+Arceus Fairy,493,Fairy,"<img src=""493.png"">","",Sinnoh/Gen4
+Arceus Fighting,493,Fighting,"<img src=""493-fighting.png"">","",Sinnoh/Gen4
+Arceus Fire,493,Fire,"<img src=""493-fire.png"">","",Sinnoh/Gen4
+Arceus Flying,493,Flying,"<img src=""493-flying.png"">","",Sinnoh/Gen4
+Arceus Ghost,493,Ghost,"<img src=""493-ghost.png"">","",Sinnoh/Gen4
+Arceus Grass,493,Grass,"<img src=""493-grass.png"">","",Sinnoh/Gen4
+Arceus Ground,493,Ground,"<img src=""493-ground.png"">","",Sinnoh/Gen4
+Arceus Ice,493,Ice,"<img src=""493-ice.png"">","",Sinnoh/Gen4
+Arceus Normal,493,Normal,"<img src=""493-normal.png"">","",Sinnoh/Gen4
+Arceus Poison,493,Poison,"<img src=""493-poison.png"">","",Sinnoh/Gen4
+Arceus Psychic,493,Psychic,"<img src=""493-psychic.png"">","",Sinnoh/Gen4
+Arceus Rock,493,Rock,"<img src=""493-rock.png"">","",Sinnoh/Gen4
+Arceus Steel,493,Steel,"<img src=""493-steel.png"">","",Sinnoh/Gen4
+Arceus Water,493,Water,"<img src=""493-water.png"">","",Sinnoh/Gen4
 Meltan,808,Steel,"<img src=""pokemon_icon_808_00.png"">","<img src=""pokemon_icon_808_00_shiny.png"">",Alola/Gen7
 Melmetal,809,Steel,"<img src=""pokemon_icon_809_00.png"">","<img src=""pokemon_icon_809_00_shiny.png"">",Alola/Gen7

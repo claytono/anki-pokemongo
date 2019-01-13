@@ -45,12 +45,21 @@ class Pokemon
   end
 
   # Returns the normal asset filename and the shiny filename
-  def asset_filename
-    format('pokemon_icon_%<number>03d_%<asset_id>02d.png',
+  def asset_filenames
+    pogo = format('pokemon_icon_%<number>03d_%<asset_id>02d.png',
       number: number, asset_id: asset_id)
+    filenames = [pogo]
+
+    if form?
+      filenames << format('%<number>d-%<form>s.png',
+        number: number, form: form.to_s)
+    end
+
+    filenames << number.to_s + ".png"
+    filenames
   end
 
-  def shiny_asset_filename
+  def shiny_asset_filenames
     format('pokemon_icon_%<number>03d_%<asset_id>02d_shiny.png',
       number: number, asset_id: asset_id)
   end
