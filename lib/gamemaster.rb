@@ -16,6 +16,11 @@ class Gamemaster
     @types = []
     @forms = {}
     @form_families = {}
+    @decorators = []
+  end
+
+  def add_decorator(decorator)
+    @decorators << decorator
   end
 
   def load
@@ -44,6 +49,10 @@ class Gamemaster
   def process_entries
     @forms = {}
     @gamemaster.each_value do |item|
+      @decorators.each do |d|
+        item = d.decorate(item)
+      end
+
       if item.key?('pokemonSettings')
         @pokemon << Pokemon.new(item, @gamemaster)
       elsif item.key?('typeEffective')

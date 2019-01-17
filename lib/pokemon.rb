@@ -6,6 +6,7 @@ require 'generation'
 class Pokemon
   attr_reader :name, :form, :form_id, :number
   attr_reader :generation, :types, :asset_id
+  attr_reader :pronunciation, :ipa
   attr_reader :data
 
   def initialize(entry, gamemaster)
@@ -18,6 +19,8 @@ class Pokemon
     @name = @data['pokemonId'].titlecase
     populate_form
     @asset_id = calculate_asset_id(gamemaster)
+    @pronunciation = @data['pronunciation']
+    @ipa = @data['ipa']
   end
 
   def fancy_name

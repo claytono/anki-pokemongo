@@ -7,11 +7,13 @@ require 'slop'
 
 require 'util'
 require 'gamemaster'
+require 'pronunciation'
 require 'assetmanager'
 
 # Implements the CLI interface for the Anki card generation
 class CLI
   DEFAULT_GAMEMASTER_PATH = 'PogoAssets/gamemaster/gamemaster.json'
+  DEFAULT_PRONUNCIATION_PATH = 'pokemon-pronunciation/pronunciation.json'
 
   def initialize(argv)
     @argv = argv
@@ -21,7 +23,11 @@ class CLI
   end
 
   def run
+    @pronunciation = PronunciationDecorator.new(@opts[:pronunciation])
+
+    @gamemaster.add_decorator(@pronunciation)
     @gamemaster.load
+
     export_pokemon if @opts[:pokemon]
     export_types if @opts[:types]
     export_evolutions if @opts[:evolutions]
@@ -32,9 +38,12 @@ class CLI
 
   def parse_opts(argv)
     opts = Slop.parse argv do |o|
-      o.string '-g', '--gamemaster',
+      o.string '--gamemaster',
         "Path to gamemaster json file (default: #{DEFAULT_GAMEMASTER_PATH})",
         default: DEFAULT_GAMEMASTER_PATH
+      o.string '--pronunciation',
+        "Path to pronciation json file (default: #{DEFAULT_PRONUNCIATION_PATH})",
+        default: DEFAULT_PRONUNCIATION_PATH
       o.string '-o', '--output',
         'Directory for output files (default: output/)',
         default: 'output'
@@ -114,6 +123,8 @@ class CLI
       @am.make_img_src(pokemon.asset_filenames),
       @am.make_img_src(pokemon.shiny_asset_filenames),
       pokemon.generation,
+      pokemon.pronunciation,
+      pokemon.ipa,
     ].to_csv
   end
 
