@@ -30,6 +30,7 @@ class CLI
 
     export_pokemon if @opts[:pokemon]
     export_types if @opts[:types]
+    export_types_cloze if @opts[:types_cloze]
     export_evolutions if @opts[:evolutions]
     @am.collect_assets
   end
@@ -50,6 +51,8 @@ class CLI
       o.bool '--pokemon', 'Export pokemon data (default: true)',
         default: true
       o.bool '--types', 'Export type effectiveness data (default: true)',
+        default: true
+      o.bool '--types-cloze', 'Export cloze type effectiveness data (default: true)',
         default: true
       o.bool '--evolutions', 'Export evolutions data (default: true)',
         default: true
@@ -92,6 +95,32 @@ class CLI
         end
       end
       puts "Processed #{count} types"
+    end
+  end
+
+  def export_types_cloze
+    output_file('types_cloze') do |f|
+      types = @gamemaster.types
+      count = 0
+
+      types.each do |type1|
+        effectiveness = Hash.new { |h,k| h[k] = [] }
+        types.each do |type2|
+          summary, scalar = type1.vs(type2)
+          effectiveness[summary] << type2.name
+        end
+
+        effectiveness.each_pair do |effectiveness, type2|
+          next if effectiveness == "Neutral"
+          line = types_to_csv_cloze(type1.name, effectiveness, type2)
+          next unless line
+
+          f.puts line
+          count += 1
+        end
+      end
+
+      puts "Processed #{count} type cloze cards"
     end
   end
 
@@ -140,6 +169,23 @@ class CLI
     ].to_csv
   end
 
+  def types_to_csv_cloze(type1, effectiveness, type2)
+    key = [type1, effectiveness].join('-')
+    str = "#{type1} vs "
+    cloze = []
+    i = 1
+    r = Random.new(0)
+    type2.shuffle(random: r).each do |t2|
+      cloze << "{{c#{i}::#{t2}}}"
+      i += 1
+    end
+
+    [
+      key,
+      str + join_with_and(cloze) + " is {{c#{i}::#{effectiveness}}}"
+    ].to_csv
+  end
+
   def evolution_to_csv(evolution)
     [
       evolution.to.fancy_name,
@@ -150,5 +196,11 @@ class CLI
     ].to_csv
   end
 
+  def join_with_and(a)
+    return a.first if a.length == 1
+    return a.join(' and ') if a.length == 2
 
+    last = a.pop
+    a.join(', ') + ' and ' + last
+  end
 end

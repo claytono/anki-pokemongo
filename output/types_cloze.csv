@@ -1,0 +1,43 @@
+Bug-Super effective,"Bug vs {{c1::Psychic}}, {{c2::Grass}} and {{c3::Dark}} is {{c4::Super effective}}"
+Bug-Not very effective,"Bug vs {{c1::Steel}}, {{c2::Fire}}, {{c3::Fighting}}, {{c4::Flying}}, {{c5::Fairy}}, {{c6::Poison}} and {{c7::Ghost}} is {{c8::Not very effective}}"
+Dark-Not very effective,"Dark vs {{c1::Fighting}}, {{c2::Fairy}} and {{c3::Dark}} is {{c4::Not very effective}}"
+Dark-Super effective,Dark vs {{c1::Psychic}} and {{c2::Ghost}} is {{c3::Super effective}}
+Dragon-Super effective,Dragon vs {{c1::Dragon}} is {{c2::Super effective}}
+Dragon-No effect,Dragon vs {{c1::Fairy}} is {{c2::No effect}}
+Dragon-Not very effective,Dragon vs {{c1::Steel}} is {{c2::Not very effective}}
+Electric-Not very effective,"Electric vs {{c1::Grass}}, {{c2::Electric}} and {{c3::Dragon}} is {{c4::Not very effective}}"
+Electric-Super effective,Electric vs {{c1::Water}} and {{c2::Flying}} is {{c3::Super effective}}
+Electric-No effect,Electric vs {{c1::Ground}} is {{c2::No effect}}
+Fairy-Super effective,"Fairy vs {{c1::Fighting}}, {{c2::Dragon}} and {{c3::Dark}} is {{c4::Super effective}}"
+Fairy-Not very effective,"Fairy vs {{c1::Steel}}, {{c2::Poison}} and {{c3::Fire}} is {{c4::Not very effective}}"
+Fighting-Not very effective,"Fighting vs {{c1::Flying}}, {{c2::Bug}}, {{c3::Fairy}}, {{c4::Poison}} and {{c5::Psychic}} is {{c6::Not very effective}}"
+Fighting-Super effective,"Fighting vs {{c1::Normal}}, {{c2::Dark}}, {{c3::Ice}}, {{c4::Rock}} and {{c5::Steel}} is {{c6::Super effective}}"
+Fighting-No effect,Fighting vs {{c1::Ghost}} is {{c2::No effect}}
+Fire-Super effective,"Fire vs {{c1::Ice}}, {{c2::Steel}}, {{c3::Grass}} and {{c4::Bug}} is {{c5::Super effective}}"
+Fire-Not very effective,"Fire vs {{c1::Rock}}, {{c2::Water}}, {{c3::Fire}} and {{c4::Dragon}} is {{c5::Not very effective}}"
+Flying-Super effective,"Flying vs {{c1::Grass}}, {{c2::Fighting}} and {{c3::Bug}} is {{c4::Super effective}}"
+Flying-Not very effective,"Flying vs {{c1::Steel}}, {{c2::Rock}} and {{c3::Electric}} is {{c4::Not very effective}}"
+Ghost-Not very effective,Ghost vs {{c1::Dark}} is {{c2::Not very effective}}
+Ghost-Super effective,Ghost vs {{c1::Psychic}} and {{c2::Ghost}} is {{c3::Super effective}}
+Ghost-No effect,Ghost vs {{c1::Normal}} is {{c2::No effect}}
+Grass-Not very effective,"Grass vs {{c1::Steel}}, {{c2::Fire}}, {{c3::Dragon}}, {{c4::Flying}}, {{c5::Bug}}, {{c6::Poison}} and {{c7::Grass}} is {{c8::Not very effective}}"
+Grass-Super effective,"Grass vs {{c1::Water}}, {{c2::Rock}} and {{c3::Ground}} is {{c4::Super effective}}"
+Ground-Not very effective,Ground vs {{c1::Grass}} and {{c2::Bug}} is {{c3::Not very effective}}
+Ground-Super effective,"Ground vs {{c1::Poison}}, {{c2::Electric}}, {{c3::Fire}}, {{c4::Rock}} and {{c5::Steel}} is {{c6::Super effective}}"
+Ground-No effect,Ground vs {{c1::Flying}} is {{c2::No effect}}
+Ice-Super effective,"Ice vs {{c1::Grass}}, {{c2::Ground}}, {{c3::Flying}} and {{c4::Dragon}} is {{c5::Super effective}}"
+Ice-Not very effective,"Ice vs {{c1::Steel}}, {{c2::Water}}, {{c3::Ice}} and {{c4::Fire}} is {{c5::Not very effective}}"
+Normal-No effect,Normal vs {{c1::Ghost}} is {{c2::No effect}}
+Normal-Not very effective,Normal vs {{c1::Steel}} and {{c2::Rock}} is {{c3::Not very effective}}
+Poison-Super effective,Poison vs {{c1::Grass}} and {{c2::Fairy}} is {{c3::Super effective}}
+Poison-Not very effective,"Poison vs {{c1::Poison}}, {{c2::Rock}}, {{c3::Ground}} and {{c4::Ghost}} is {{c5::Not very effective}}"
+Poison-No effect,Poison vs {{c1::Steel}} is {{c2::No effect}}
+Psychic-No effect,Psychic vs {{c1::Dark}} is {{c2::No effect}}
+Psychic-Super effective,Psychic vs {{c1::Poison}} and {{c2::Fighting}} is {{c3::Super effective}}
+Psychic-Not very effective,Psychic vs {{c1::Steel}} and {{c2::Psychic}} is {{c3::Not very effective}}
+Rock-Super effective,"Rock vs {{c1::Flying}}, {{c2::Ice}}, {{c3::Fire}} and {{c4::Bug}} is {{c5::Super effective}}"
+Rock-Not very effective,"Rock vs {{c1::Steel}}, {{c2::Ground}} and {{c3::Fighting}} is {{c4::Not very effective}}"
+Steel-Not very effective,"Steel vs {{c1::Steel}}, {{c2::Water}}, {{c3::Fire}} and {{c4::Electric}} is {{c5::Not very effective}}"
+Steel-Super effective,"Steel vs {{c1::Rock}}, {{c2::Ice}} and {{c3::Fairy}} is {{c4::Super effective}}"
+Water-Not very effective,"Water vs {{c1::Water}}, {{c2::Grass}} and {{c3::Dragon}} is {{c4::Not very effective}}"
+Water-Super effective,"Water vs {{c1::Rock}}, {{c2::Ground}} and {{c3::Fire}} is {{c4::Super effective}}"
