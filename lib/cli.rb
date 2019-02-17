@@ -54,6 +54,8 @@ class CLI
         default: true
       o.bool '--types-cloze', 'Export cloze type effectiveness data (default: true)',
         default: true
+      o.bool '--randomize-cloze', "Random cloze order (default: true )",
+        default: true
       o.bool '--evolutions', 'Export evolutions data (default: true)',
         default: true
       o.boolean '-h', '--help', 'Display help'
@@ -170,16 +172,19 @@ class CLI
   end
 
   def types_to_csv_cloze(type1, effectiveness, type2)
+    # Assign all the cloze numbers to the types in sorted order, then shuffle
+    # them so that each time we generate the CSV we get different output, but
+    # the same cloze numbers.  That way Anki can remember what we know.
     key = [type1, effectiveness].join('-')
     str = "#{type1} vs "
     cloze = []
     i = 1
-    r = Random.new(0)
-    type2.shuffle(random: r).each do |t2|
+    type2.sort.each do |t2|
       cloze << "{{c#{i}::#{t2}}}"
       i += 1
     end
 
+    cloze.shuffle! if @opts[:randomize_cloze]
     [
       key,
       str + join_with_and(cloze) + " is {{c#{i}::#{effectiveness}}}"
